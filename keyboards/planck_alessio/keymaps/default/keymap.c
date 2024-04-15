@@ -96,25 +96,25 @@ const uint32_t PROGMEM unicode_map[] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-[_QWERTY] = LAYOUT_planck_grid( // default layer
+[_QWERTY] = LAYOUT( // default layer
         LT(6,KC_ESC), KC_Q, KC_W, KC_F, KC_P, KC_G, KC_J, KC_L, KC_U, KC_Y, KC_SCLN, KC_BSPC, 
         LT(4, KC_TAB), KC_A, KC_R, KC_S, KC_T, KC_D, KC_H, KC_N, KC_E, KC_I, KC_O, MT(MOD_LSFT, KC_ENT), 
         KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_K, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_QUOT, 
         _______, KC_LCTL, KC_LGUI, KC_LALT, MO(1), KC_SPC, MO(2), KC_LEFT, KC_DOWN, KC_UP, KC_RGHT),
 
-[_LOWER] = LAYOUT_planck_grid( // lower level
+[_LOWER] = LAYOUT( // lower level
         KC_TILD, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL, 
         KC_DEL, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_UNDS, KC_PLUS, KC_LBRC, KC_RBRC, KC_BSLS, 
-        KC_TRNS, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_TRNS, KC_TRNS, KC_LCBR, KC_RCBR, KC_TRNS, 
+        KC_CAPS, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_TRNS, KC_TRNS, KC_LCBR, KC_RCBR, KC_TRNS, 
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, LCA(KC_BSPC), KC_TRNS, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY),
 
-[_RAISE] = LAYOUT_planck_grid( //reaise level 
+[_RAISE] = LAYOUT( //reaise level 
         KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_TRNS, 
         KC_DEL, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_TRNS, KC_UNDERSCORE, KC_EQL, KC_AT, KC_GRAVE, 
         KC_TRNS, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_TRNS, KC_MINUS, KC_PLUS, KC_BSLS, KC_TRNS, 
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY),
 
-[_ADJUST] = LAYOUT_planck_grid( //mouse and other functions level, also activable with rasie+lower
+[_ADJUST] = LAYOUT( //mouse and other functions level, also activable with rasie+lower
 
         // KC_TRNS, KC_MS_BTN1, KC_MS_UP, KC_MS_BTN2, KC_TRNS, KC_TRNS, KC_TRNS, KC_7, KC_8, KC_9, KC_SLSH, KC_TRNS, 
         // KC_TRNS, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, KC_TRNS, KC_TRNS, KC_TRNS, KC_4, KC_5, KC_6, KC_MS_WH_UP, KC_TRNS, 
@@ -122,30 +122,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MEDIA_PLAY_PAUSE, KC_0, KC_0, KC_DOT, KC_COMM, KC_TRNS),
 
 
-    _______, RGB_MODE_KNIGHT,   UC_MOD,   RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, _______,  _______, KC_TRANSPARENT, KC_SYSTEM_SLEEP ,
-    _______, _______, _______, _______, _______, _______, _______, RGB_TOG,  RGB_VAD,  RGB_VAI, RGB_MODE_KNIGHT, RESET,
+    _______, RGB_MODE_KNIGHT,   UC_NEXT,   RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, _______,  _______, KC_TRANSPARENT, KC_SYSTEM_SLEEP ,
+    _______, _______, _______, _______, _______, _______, _______, RGB_TOG,  RGB_VAD,  RGB_VAI, RGB_MODE_KNIGHT, QK_BOOT,
     _______, _______, _______, _______, _______, _______, _______, RGB_MOD,  RGB_HUD,  RGB_HUI, _______, _______,
     _______, _______, _______, _______, _______, _______, _______, RGB_SAD,  RGB_SAI, _______, _______
 ),
 
-[_LAYER4] = LAYOUT_planck_grid( //TAB
+[_LAYER4] = LAYOUT( //TAB
     LT(5,KC_ESCAPE),KC_MS_BTN1,     KC_MS_UP,       KC_MS_BTN2,     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_7,           KC_8,           KC_9,           KC_SLASH,       KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_RIGHT,    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_4,           KC_5,           KC_6,           KC_MS_WH_UP,    KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_1,           KC_2,           KC_3,           KC_MS_WH_DOWN,  KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,KC_TRANSPARENT, KC_0,           KC_DOT,         KC_TRANSPARENT, KC_TRANSPARENT
   ),
 
-[_FUNCTION] = LAYOUT_planck_grid( //Function Key
+[_FUNCTION] = LAYOUT( //Function Key
 
         TO(0), RGB_TOG, RGB_MOD, RGB_HUI, KC_TRNS, RGB_MODE_PLAIN, KC_TRNS, KC_TRNS, SGUI(KC_R), KC_TRNS, KC_PSCR, KC_SLEP, 
-        TG(3), AU_TOG, MU_TOG, MU_MOD, CK_TOGG, KC_TRNS, KC_TRNS, KC_TRNS, RGB_MODE_KNIGHT, KC_TRNS, KC_PGUP, KC_WAKE, 
-        KC_TRNS, XSS1, XSS, RCS(KC_C), LCTL(KC_V), KC_BRIGHTNESS_DOWN, KC_BRIGHTNESS_UP, KC_TRNS, KC_TRNS, KC_TRNS, KC_PGDOWN, RESET, 
+        TG(3), AU_TOGG, MU_TOGG, MU_NEXT, CK_TOGG, KC_TRNS, KC_TRNS, KC_TRNS, RGB_MODE_KNIGHT, KC_TRNS, KC_PGUP, KC_WAKE, 
+        KC_TRNS, XSS1, XSS, RCS(KC_C), LCTL(KC_V), KC_BRIGHTNESS_DOWN, KC_BRIGHTNESS_UP, KC_TRNS, KC_TRNS, KC_TRNS, KC_PAGE_DOWN, QK_BOOT, 
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, TG(1), KC_MEDIA_PLAY_PAUSE, TG(2), KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT),
 
-[_ESC] = LAYOUT_planck_grid( //ESC Key used for accent and some special key/functions
+[_ESC] = LAYOUT( //ESC Key used for accent and some special key/functions
 
-        KC_TRNS, UC_MOD, UC_WINC, UC(0x000E8), RANDOM, KC_TILDE, KC_TRNS, UC(0x000F9), UC(0x000EC), UC(0x000F2), KC_TRNS, KC_TRNS, 
-        KC_TRNS, UC(0x000E0), UC(0x020AC), UC(0x000B0), KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, UC_LNX, KC_TRNS, KC_TRNS, 
+        KC_TRNS, UC_NEXT, UC_WINC, UC(0x000E8), RANDOM, KC_TILDE, KC_TRNS, UC(0x000F9), UC(0x000EC), UC(0x000F2), KC_TRNS, KC_TRNS, 
+        KC_TRNS, UC(0x000E0), UC(0x020AC), UC(0x000B0), KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, UC_LINX, KC_TRNS, KC_TRNS, 
         KC_TRNS, KC_TRNS, KC_TRNS, UC(0x30C4), EICAR, KC_TRNS, KC_TRNS, MEH, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, TG(1), KC_TRNS, TG(2), KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS)
 
@@ -252,7 +252,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (record->event.pressed) {
             // when keycode QMKBEST is pressed
            // SEND_STRING("¯\_(ツ)_/¯");
-                    send_unicode_hex_string("00AF 005C 005F 0028 30C4 0029 005F 002F 00AF");
+                    //send_unicode_hex_string("00AF 005C 005F 0028 30C4 0029 005F 002F 00AF");
                             } else {
             // when keycode QMKBEST is released
         }

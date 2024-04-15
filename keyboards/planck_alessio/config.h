@@ -17,14 +17,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
+//#include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID    0xFEED
-#define PRODUCT_ID   0x0000
-#define DEVICE_VER   0x0001
-#define MANUFACTURER GiorgioCampiotti
-#define PRODUCT      PlankGiorgio3D
+//#define VENDOR_ID    0xFEED
+//#define PRODUCT_ID   0x0000
+//#define DEVICE_VER   0x0001
+//#define MANUFACTURER GiorgioCampiotti
+//#define PRODUCT      PlankGiorgio3D
 
 /* key matrix size */
 #define MATRIX_ROWS 4
@@ -42,7 +42,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #define MATRIX_ROW_PINS { D1, D0, D4, C6 }
 #define MATRIX_COL_PINS { D7, E6, B4, B6, B2, B3, B1, F7, F6, F5, F4, D3 }
-#define UNUSED_PINS
+//#define UNUSED_PINS
 
 /* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW
@@ -75,9 +75,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define NO_PRINT
     #endif // !NO_PRINT
 
-
-#define RGB_DI_PIN D2
-#ifdef RGB_DI_PIN
+// Penso che questo ora si debba chiamare WS2812_DI_PIN
+#define WS2812_DI_PIN D2
+#ifdef WS2812_DI_PIN
 //#define RGBLIGHT_ANIMATIONS
 #define RGBLIGHT_EFFECT_STATIC_GRADIENT
 #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
@@ -97,20 +97,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define RGBLIGHT_LAYERS_OVERRIDE_RGB_OFF
 
-#define B5_AUDIO
-#define AUDIO_CLICKY
+// #define B5_AUDIO
+// #define AUDIO_CLICKY
 
 
-#define NO_MUSIC_MODE
+// #define NO_MUSIC_MODE
 
-#ifdef AUDIO_ENABLE
-  #define STARTUP_SONG SONG(PLANCK_SOUND)
-#endif
+// #ifdef AUDIO_ENABLE
+//   #define STARTUP_SONG SONG(PLANCK_SOUND)
+// #endif
 
 
 
 //#define UNICODE_SELECTED_MODES UC_LNX
-#define UNICODE_SELECTED_MODES UC_LNX,UC_WINC
+//#define UNICODE_SELECTED_MODES QK_UNICODE_MODE_WINCOMPOSE
 #define MOUSEKEY_DELAY 50
 
 #define MOUSEKEY_INTERVAL 30
@@ -211,8 +211,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_ONESHOT
 
 /* disable these deprecated features by default */
-#define NO_ACTION_MACRO
-#define NO_ACTION_FUNCTION
+// #define NO_ACTION_MACRO
+// #define NO_ACTION_FUNCTION
 
 /* Bootmagic Lite key configuration */
 //#define BOOTMAGIC_LITE_ROW 0
